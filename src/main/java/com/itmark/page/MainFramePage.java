@@ -1,5 +1,6 @@
 package com.itmark.page;
 
+import cn.hutool.core.lang.Console;
 import com.itmark.constant.BoxAppConstant;
 
 import javax.swing.*;
@@ -34,7 +35,7 @@ public class MainFramePage {
             @Override
             public void stateChanged(ChangeEvent e) {
                 int selectedIndex = tabbedPane.getSelectedIndex();
-                // log.info("被选中了："+selectedIndex);
+                Console.log("被选中了：{}"+selectedIndex);
             }
 
         });
