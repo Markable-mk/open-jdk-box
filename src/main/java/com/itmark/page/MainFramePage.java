@@ -2,6 +2,7 @@ package com.itmark.page;
 
 import cn.hutool.core.lang.Console;
 import com.itmark.constant.BoxAppConstant;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -12,6 +13,7 @@ import javax.swing.event.ChangeListener;
  * @author: MAKUAN
  * @date: 2024/8/22 14:43
  */
+@Slf4j
 public class MainFramePage {
     JFrame jFrame = new JFrame(BoxAppConstant.APP_TITLE);
 
@@ -35,7 +37,7 @@ public class MainFramePage {
             @Override
             public void stateChanged(ChangeEvent e) {
                 int selectedIndex = tabbedPane.getSelectedIndex();
-                Console.log("被选中了：{}"+selectedIndex);
+                log.info("被选中了：{}",selectedIndex);
             }
 
         });
